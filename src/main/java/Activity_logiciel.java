@@ -1,7 +1,4 @@
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import lombok.extern.slf4j.Slf4j;
 import models.ActivityDto;
 import org.bson.Document;
@@ -16,16 +13,26 @@ public class Activity_logiciel {
             MongoCollection<Document> activityCollection = Connection.connect("myActivities", "activities");
             ActivityRepositoryImpl activityRepositoryImpl = new ActivityRepositoryImpl(activityCollection);
 
-            ActivityDto activityDto = new ActivityDto();
-            activityDto.setName("tennis");
-            activityDto.setDuration(240);
-            activityDto.setDate(new Date());
-            activityDto.setRpe(8);
-            activityDto.setCharge(activityDto.getDuration() * activityDto.getRpe());
+            addActivity(activityRepositoryImpl);
+            readActivity(activityRepositoryImpl);
 
-            log.info("Activity saved {}", activityRepositoryImpl.save(activityDto));
         } catch (Exception e) {
             log.error("An error occurred during connection ==> {}", e);
         }
+    }
+
+    private static void addActivity(ActivityRepositoryImpl activityRepositoryImpl) {
+        ActivityDto activityDto = new ActivityDto();
+        activityDto.setName("tennis");
+        activityDto.setDuration(240);
+        activityDto.setDate(new Date());
+        activityDto.setRpe(8);
+        activityDto.setCharge(activityDto.getDuration() * activityDto.getRpe());
+
+        log.info("Activity saved {}", activityRepositoryImpl.save(activityDto));
+    }
+
+    private static void readActivity(ActivityRepositoryImpl activityRepositoryImpl) {
+        log.info("All activities: {}", activityRepositoryImpl.getAll());
     }
 }
