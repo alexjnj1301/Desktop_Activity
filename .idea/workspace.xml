@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95b6d40c-e2ed-4346-8034-1a5d16b402c5" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Activity_logiciel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Activity_logiciel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mappers/ActivityMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mappers/ActivityMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ActivityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ActivityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/repository/ActivityRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/ActivityRepositoryImpl.java" afterDir="false" />
     </list>
@@ -126,6 +123,8 @@
       <workItem from="1686642013123" duration="26000" />
       <workItem from="1686642046435" duration="179000" />
       <workItem from="1686642246777" duration="38000" />
+      <workItem from="1686642303741" duration="1005000" />
+      <workItem from="1686643738478" duration="2041000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686572273161</created>

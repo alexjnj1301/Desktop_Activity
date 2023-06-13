@@ -13,8 +13,10 @@ public class Activity_logiciel {
             MongoCollection<Document> activityCollection = Connection.connect("myActivities", "activities");
             ActivityRepositoryImpl activityRepositoryImpl = new ActivityRepositoryImpl(activityCollection);
 
-            addActivity(activityRepositoryImpl);
-            readActivity(activityRepositoryImpl);
+            //addActivity(activityRepositoryImpl);
+            //readActivity(activityRepositoryImpl);
+            //deleteActivity(activityRepositoryImpl);
+            deleteActivities(activityRepositoryImpl);
 
         } catch (Exception e) {
             log.error("An error occurred during connection ==> {}", e);
@@ -34,5 +36,13 @@ public class Activity_logiciel {
 
     private static void readActivity(ActivityRepositoryImpl activityRepositoryImpl) {
         log.info("All activities: {}", activityRepositoryImpl.getAll());
+    }
+
+    private static void deleteActivity(ActivityRepositoryImpl activityRepositoryImpl) {
+        log.info("Activity deleted {}", activityRepositoryImpl.deleteOne("Course"));
+    }
+
+    private static void deleteActivities(ActivityRepositoryImpl activityRepositoryImpl) {
+        log.info("Activities deleted {}", activityRepositoryImpl.deleteMany("tennis"));
     }
 }

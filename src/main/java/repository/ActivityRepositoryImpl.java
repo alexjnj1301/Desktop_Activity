@@ -1,6 +1,7 @@
 package repository;
 
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.result.DeleteResult;
 import com.mongodb.client.result.InsertOneResult;
 import models.ActivityDto;
 import org.bson.Document;
@@ -28,5 +29,15 @@ public class ActivityRepositoryImpl implements ActivityRepository {
             activities.add(documentToActivity(document));
         }
         return activities;
+    }
+
+    @Override
+    public DeleteResult deleteOne(String name) {
+        return this.collection.deleteOne(new Document("name", name));
+    }
+
+    @Override
+    public DeleteResult deleteMany(String name) {
+        return this.collection.deleteMany(new Document("name", name));
     }
 }
